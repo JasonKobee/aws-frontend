@@ -9,7 +9,7 @@ export class ServiceService {
 
   constructor(private http: HttpClient) { }
 
-  url = 'http://myBalancerCf-475885405.us-east-1.elb.amazonaws.com/personas';
+  url = 'https://myBalancerCf-475885405.us-east-1.elb.amazonaws.com/personas';
 
   getPersonas() {
     return this.http.get<Persona[]>(this.url);
