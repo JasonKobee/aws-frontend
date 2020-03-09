@@ -13,11 +13,11 @@ export class ServiceService {
   //url = 'http://localhost:8080/personas';
 
   getPersonas() {
-    return this.http.get<Persona[]>(this.url);
+    return this.http.get<Persona[]>(this.url + "/listar");
   }
 
   createPersona(persona: Persona) {
-    return this.http.post<Persona>(this.url, persona);
+    return this.http.post<Persona>(this.url + "/agregar", persona);
   }
 
   getPersonaId(id: number) {
