@@ -9,7 +9,7 @@ export class ServiceService {
 
   constructor(private http: HttpClient) { }
 
-  url = 'http://mybalancercf-419253763.us-east-1.elb.amazonaws.com/personas';
+  url = 'https://njekv67un9.execute-api.us-east-1.amazonaws.com/prod/personas';
   //url = 'http://localhost:8080/personas';
 
   getPersonas() {
@@ -21,14 +21,14 @@ export class ServiceService {
   }
 
   getPersonaId(id: number) {
-    return this.http.get<Persona>(this.url + "/" + id);
+    return this.http.get<Persona>(this.url + "/listar/" + id);
   }
 
   updatePersona(persona: Persona) {
-    return this.http.put<Persona>(this.url + "/" + persona.id, persona);
+    return this.http.put<Persona>(this.url + "/actualizar/" + persona.id, persona);
   }
 
   deletePersona(persona: Persona){
-    return this.http.delete<Persona>(this.url + "/" + persona.id);
+    return this.http.delete<Persona>(this.url + "/eliminar/" + persona.id);
   }
 } 
