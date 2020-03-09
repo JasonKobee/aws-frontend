@@ -9,8 +9,8 @@ export class ServiceService {
 
   constructor(private http: HttpClient) { }
 
-  //url = 'http://myBalancerCf-475885405.us-east-1.elb.amazonaws.com/personas';
-  url = 'http://localhost:8080/personas';
+  url = 'http://mybalancercf-419253763.us-east-1.elb.amazonaws.com/personas';
+  //url = 'http://localhost:8080/personas';
 
   getPersonas() {
     return this.http.get<Persona[]>(this.url);
