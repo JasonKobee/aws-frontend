@@ -9,7 +9,7 @@ export class ServiceService {
 
   constructor(private http: HttpClient) { }
 
-  url = 'https://njekv67un9.execute-api.us-east-1.amazonaws.com/prod/personas';
+  url = 'https://2wd06xo996.execute-api.us-east-1.amazonaws.com/prod/personas';
   //url = 'http://localhost:8080/personas';
 
   getPersonas() {
