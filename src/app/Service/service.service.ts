@@ -9,8 +9,8 @@ export class ServiceService {
 
   constructor(private http: HttpClient) { }
 
-  url = 'https://2wd06xo996.execute-api.us-east-1.amazonaws.com/prod/personas';
-  //url = 'http://localhost:8080/personas';
+  //url = 'https://2wd06xo996.execute-api.us-east-1.amazonaws.com/prod/api/personas';
+  url = 'http://localhost:8080/api/personas';
 
   getPersonas() {
     return this.http.get<Persona[]>(this.url + "/listar");
@@ -28,7 +28,7 @@ export class ServiceService {
     return this.http.put<Persona>(this.url + "/actualizar/" + persona.id, persona);
   }
 
-  deletePersona(persona: Persona){
+  deletePersona(persona: Persona) {
     return this.http.delete<Persona>(this.url + "/eliminar/" + persona.id);
   }
 } 
